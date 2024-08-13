@@ -16,14 +16,20 @@ import (
 
 // closures
 
-func counter() func() int {
-	count := 0
-	return func() int {
-		count++
-		return count
-	}
-}
+// func counter() func() int {
+// 	count := 0
+// 	return func() int {
+// 		count++
+// 		return count
+// 	}
+// }
 
+func fact(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * fact(n-1)
+}
 func main() {
 
 	// swicth statement
@@ -57,10 +63,14 @@ func main() {
 
 	// CLOSURES
 
-	increment := counter()
+	// increment := counter()
 
-	fmt.Println(increment())
-	fmt.Println(increment())
-	fmt.Println(increment())
+	// fmt.Println(increment())
+	// fmt.Println(increment())
+	// fmt.Println(increment())
+
+	// Recursion
+
+	fmt.Println(fact(7))
 
 }
